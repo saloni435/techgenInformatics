@@ -1,0 +1,147 @@
+.industry-solutions-container {
+  display: flex;
+  gap: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  margin: 40px auto;
+  background: #fff;
+  max-width: 92vw;
+  min-height: 480px;
+}
+
+.industry-card {
+  flex: 1 1 0;
+  min-width: 80px;
+  max-width: 120px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  transition: flex 0.4s cubic-bezier(.4,2,.6,1), max-width 0.4s, min-width 0.4s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.industry-card:hover,
+.industry-card:focus-within {
+  flex: 3 1 0;
+  max-width: 420px;
+  min-width: 320px;
+  align-items: center;
+  justify-content: flex-start;
+  transition: flex 0.4s cubic-bezier(.4,2,.6,1), max-width 0.4s, min-width 0.4s;
+  z-index: 2;
+}
+
+.industry-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,rgba(0,0,0,0.18) 0%,rgba(0,0,0,0.62) 100%);
+  z-index: 1;
+}
+
+.industry-card-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 32px;
+  text-align: center;
+  width: 100%;
+  user-select: none;
+}
+
+.industry-card:hover .industry-card-title,
+.industry-card:focus-within .industry-card-title {
+  writing-mode: initial;
+  transform: none;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  margin-left: 32px;
+  text-align: left;
+}
+
+.industry-card-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  color: #e0e0e0;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.industry-card:hover .industry-card-desc,
+.industry-card:focus-within .industry-card-desc {
+  color: #fff;
+}
+
+.industry-card-details {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 3;
+  color: #fff;
+  padding: 48px 36px 36px 36px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg,rgba(0,0,0,0.18) 0%,rgba(0,0,0,0.62) 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: top 0.4s cubic-bezier(.4,2,.6,1), opacity 0.4s cubic-bezier(.4,2,.6,1);
+}
+
+.industry-card:hover .industry-card-details,
+.industry-card:focus-within .industry-card-details {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.industry-card-details h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.industry-card-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  font-size: 1.1rem;
+}
+
+.industry-card-details li {
+  margin-bottom: 10px;
+}
+
+.industry-view-all {
+  color: #f6a21e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.arrow-icon {
+  margin-left: 6px;
+  font-size: 1.2em;
+}
+
+.industry-solutions-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #222;
+}

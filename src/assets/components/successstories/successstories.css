@@ -1,0 +1,24 @@
+.success-stories-section {
+  margin: 48px 0;
+  padding: 0 32px;
+}
+.success-stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.success-stories-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.view-all-link {
+  font-weight: 500;
+  color: #2a5bd7;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.arrow-icon {
+  font-size: 1.1rem;
+}
