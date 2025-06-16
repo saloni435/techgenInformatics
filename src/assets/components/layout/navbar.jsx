@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css'; // You'll need to create this CSS file
+import techgenLogo from '../../images/techgen-logo.png'; // Update path as needed
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +84,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          Tech Gen Informatics
+          <img src={techgenLogo} alt="Tech Gen Informatics Logo" className="logo" />
         </Link>
         
         <div className="menu-icon" onClick={toggleMenu}>
