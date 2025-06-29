@@ -1,5 +1,9 @@
 import React from "react";
 import "./industrysolutions.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 // Dummy Unsplash images for each industry
 const healthcareImg = "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=400&q=80"; // new healthcare image
@@ -61,38 +65,48 @@ const industries = [
 
 ];
 
-const IndustrySolutions = () => (
-  <>
-    <h1 className="industry-solutions-title">Industry Solutions</h1>
-    <div className="industry-solutions-container">
-      {industries.map((industry) => (
-        <div
-          key={industry.name}
-          className="industry-card"
-          style={{ backgroundImage: `url(${industry.img})` }}
+export default function IndustrySolutions() {
+  return (
+    <section className="industry-solutions-section">
+      <h1 className="industry-solutions-title">Industry Solutions</h1>
+      <div className="industry-solutions-carousel">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={16}
+          slidesPerView={window.innerWidth < 900 ? 1 : 3}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          loop={true}
+          className="industry-swiper"
         >
-          <div className="industry-card-overlay" />
-          <div className="industry-card-title">
-            {industry.name}
-            <div className="industry-card-desc">{industry.desc}</div>
-          </div>
-          {industry.details && (
-            <div className="industry-card-details">
-              <h2>{industry.name}</h2>
-              <ul>
-                {industry.details.map((d, i) => (
-                  <li key={i}>→ {d}</li>
-                ))}
-              </ul>
-              <a href={industry.link} className="industry-view-all">
-                View All Solutions <span className="arrow-icon">➔</span>
-              </a>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  </>
-);
-
-export default IndustrySolutions;
+          {industries.map((industry) => (
+            <SwiperSlide key={industry.name}>
+              <div className="industry-grid-card">
+                <div
+                  className="industry-grid-img"
+                  style={{ backgroundImage: `url(${industry.img})` }}
+                >
+                  <div className="industry-grid-img-overlay" />
+                  <div className="industry-grid-title">{industry.name}</div>
+                </div>
+                <div className="industry-grid-content">
+                  <div className="industry-grid-desc">{industry.desc}</div>
+                  {industry.details && (
+                    <ul className="industry-grid-details">
+                      {industry.details.map((d, i) => (
+                        <li key={i}>• {d}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <a href={industry.link || "#"} className="industry-grid-viewall">
+                    View All Solutions <span className="arrow-icon">➔</span>
+                  </a>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+}
