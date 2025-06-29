@@ -43,29 +43,14 @@ const Navbar = () => {
       path: '/industries',
       hasDropdown: true,
       dropdownItems: [
+        { name: 'Agriculture', path: '/industries/agriculture' },
+        { name: 'Citizen Services', path: '/industries/citizen-services' },
+        { name: 'Education', path: '/industries/education' },
+        { name: 'Government Functions', path: '/industries/government-functions' },
         { name: 'Healthcare', path: '/industries/healthcare' },
-        { name: 'Finance', path: '/industries/finance' },
-        { name: 'Technology', path: '/industries/technology' },
-      ]
-    },
-    {
-      name: 'Domain Offerings',
-      path: '/domain-offerings',
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Product 1', path: '/domain-offerings/product1' },
-        { name: 'Product 2', path: '/domain-offerings/product2' },
-        { name: 'Product 3', path: '/domain-offerings/product3' },
-      ]
-    },
-    {
-      name: 'Publications',
-      path: '/publications',
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Articles', path: '/publications/articles' },
-        { name: 'Whitepapers', path: '/publications/whitepapers' },
-        { name: 'Research', path: '/publications/research' },
+        { name: 'Land & Industry', path: '/industries/land-industry' },
+        { name: 'Mining', path: '/industries/mining' },
+        { name: 'Defense', path: '/industries/defense' }
       ]
     },
     {

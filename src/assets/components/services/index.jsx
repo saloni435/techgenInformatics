@@ -115,7 +115,9 @@ const ServicesSection = () => {
       <div className="container">
         {/* Header */}
         <div className="header">
-          <h2 className="main-title">Our Services</h2>
+          <h2 className="main-title">
+            Our <span>Services</span>
+          </h2>
           <p className="main-description">
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business
             innovation across all industries.
