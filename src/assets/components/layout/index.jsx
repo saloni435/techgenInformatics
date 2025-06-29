@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
       <footer>
         {/* Footer content can be added here */}
         <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} Tech Gen Informatics. All rights reserved.</p>
         </div>
       </footer>
     </>
