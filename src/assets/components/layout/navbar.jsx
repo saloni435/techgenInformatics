@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css'; // You'll need to create this CSS file
-import techgenLogo from '../../images/techgen-logo.png'; // Update path as needed
+import techgenLogo from '../../images/techgenlogo.png'; // Update path as needed
 
 
 const Navbar = () => {
