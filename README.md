@@ -1,12 +1,55 @@
-# React + Vite
+# Techgen Informatics Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official website for Techgen Informatics. Techgen is a company that provides solutions centered on cutting-edge technologies, blending AI and ML with modern advancements to support business digital transformation and innovation efforts.
 
-Currently, two official plugins are available:
+## Company Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Techgen includes several entities, such as Techgen Digital System, Techgen Informatics, and Techgen Innovation, all focused on delivering IT solutions across hardware, software, system integration, and consulting. The main goal is to help businesses respond to technological change and benefit from the latest advancements.
 
-## Expanding the ESLint configuration
+## Solutions and Technology Blend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Techgen offers AI and machine learning solutions customized for industry requirements, including natural language processing, predictive analytics, and computer vision. Their approach leverages cloud computing, automation (RPA), data engineering, and high-performance IT infrastructure to deliver quality and scalable results. Solutions are applicable in sectors like healthcare, finance, manufacturing, retail, and education. This blend of technologies allows us to provide a cutting-edge experience for our clients.
+
+## Cutting-Edge Technologies
+
+Techgen is aligned with leading trends such as the integration of AI/ML, quantum computing, blockchain, IoT, and advanced data analytics. Their continuous innovation drives efficiency, process excellence, and actionable insights for clients seeking a competitive edge in fast-changing markets.
+
+## Tech Stack
+
+*   React
+*   Vite
+*   Tailwind CSS
+*   shadcn/ui
+
+## Getting Started
+
+### Prerequisites
+
+*   Node.js (v18 or higher recommended)
+*   npm
+
+### Installation
+
+1.  Clone the repository.
+2.  Navigate to the project directory.
+3.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### Running the Development Server
+
+To start the development server, run the following command:
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server, and you can view the website at `http://localhost:5173` (or another port if 5173 is in use).
+
+## Available Scripts
+
+*   `npm run dev`: Starts the development server.
+*   `npm run build`: Builds the project for production.
+*   `npm run lint`: Lints the project files using ESLint.
+*   `npm run preview`: Serves the production build locally for preview.

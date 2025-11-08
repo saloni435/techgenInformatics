@@ -13,13 +13,45 @@ body {
 
 .services-section {
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  background: var(--background);
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    #f36f21,
+    #007bff,
+    #f36f21,
+    #007bff
+  );
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative; /* Ensure content is above pseudo-element */
+  z-index: 1;
 }
 
 .header {
@@ -30,13 +62,13 @@ body {
 .main-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--foreground);
   margin-bottom: 1rem;
 }
 
 .main-description {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--muted-foreground);
   max-width: 48rem;
   margin: 0 auto;
   line-height: 1.6;
@@ -56,13 +88,13 @@ body {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--card);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
 }
 
 .service-card:hover {
@@ -84,24 +116,24 @@ body {
 .category-icon {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #dbeafe;
-  color: #2563eb;
+  background-color: var(--secondary);
+  color: var(--primary);
   transition: all 0.3s ease;
 }
 
 .service-card:hover .category-icon {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .category-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--foreground);
 }
 
 .category-description {
-  color: #6b7280;
+  color: var(--muted-foreground);
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -124,32 +156,32 @@ body {
   gap: 0.5rem;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  background-color: #f9fafb;
+  background-color: var(--secondary);
   transition: all 0.2s ease;
 }
 
 .service-item:hover {
-  background-color: #eff6ff;
+  background-color: var(--accent);
 }
 
 .service-icon {
-  color: #6b7280;
+  color: var(--muted-foreground);
   transition: color 0.2s ease;
 }
 
 .service-item:hover .service-icon {
-  color: #2563eb;
+  color: var(--primary);
 }
 
 .service-name {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--foreground);
   transition: color 0.2s ease;
 }
 
 .service-item:hover .service-name {
-  color: #1d4ed8;
+  color: var(--primary);
 }
 
 .cta-section {
@@ -157,22 +189,22 @@ body {
 }
 
 .cta-card {
-  background: linear-gradient(to right, #2563eb, #7c3aed);
+  background: linear-gradient(to right, var(--primary), var(--accent));
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: var(--primary-foreground);
 }
 
 .cta-title {
   font-size: 2rem;
   font-weight: 700;
-  color: white;
+  color: var(--primary-foreground);
   margin-bottom: 1rem;
 }
 
 .cta-description {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--muted-foreground);
   margin-bottom: 1.5rem;
   max-width: 32rem;
   margin-left: auto;
@@ -197,26 +229,26 @@ body {
 
 .btn-primary {
   padding: 0.75rem 2rem;
-  background-color: white;
-  color: #2563eb;
+  background-color: var(--primary-foreground);
+  color: var(--primary);
   border: none;
   border-radius: 0.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--primary-foreground);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
   padding: 0.75rem 2rem;
   background-color: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: var(--primary-foreground);
+  border: 2px solid var(--border);
   border-radius: 0.5rem;
   font-weight: 600;
   cursor: pointer;
@@ -224,8 +256,8 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: white;
+  background-color: var(--accent);
+  border-color: var(--primary);
 }
 
 @media (max-width: 768px) {

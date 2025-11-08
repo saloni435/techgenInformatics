@@ -1,0 +1,72 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.css'; // You'll need to create this CSS file
+import techgenLogo from '../../images/techgenlogo.png'; // Update path as needed
+
+
+const Navbar = () => {
+
+  // const handleDropdownToggle = (dropdown) => {
+  //   setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  // };
+
+  // const navItems = [
+  //   {
+  //     name: 'About Us',
+  //     path: '/about',
+  //     hasDropdown: true,
+  //     dropdownItems: [
+  //       { name: 'Our Story', path: '/about/story' },
+  //       { name: 'Team', path: '/about/team' },
+  //       { name: 'Vision & Mission', path: '/about/vision' },
+  //     ]
+  //   },
+  //   {
+  //     name: 'Services',
+  //     path: '/services',
+  //     hasDropdown: true,
+  //     dropdownItems: [
+  //       { name: 'Consulting', path: '/services/consulting' },
+  //       { name: 'Development', path: '/services/development' },
+  //       { name: 'Support', path: '/services/support' },
+  //     ]
+  //   },
+  //   {
+  //     name: 'Industries',
+  //     path: '/industries',
+  //     hasDropdown: true,
+  //     dropdownItems: [
+  //       { name: 'Agriculture', path: '/industries/agriculture' },
+  //       { name: 'Citizen Services', path: '/industries/citizen-services' },
+  //       { name: 'Education', path: '/industries/education' },
+  //       { name: 'Government Functions', path: '/industries/government-functions' },
+  //       { name: 'Healthcare', path: '/industries/healthcare' },
+  //       { name: 'Land & Industry', path: '/industries/land-industry' },
+  //       { name: 'Mining', path: '/industries/mining' },
+  //       { name: 'Defense', path: '/industries/defense' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'Career',
+  //     path: '/career',
+  //     hasDropdown: true,
+  //     dropdownItems: [
+  //       { name: 'Open Positions', path: '/career/positions' },
+  //       { name: 'Work Culture', path: '/career/culture' },
+  //       { name: 'Benefits', path: '/career/benefits' },
+  //     ]
+  //   },
+  // ];
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <img src={techgenLogo} alt="Tech Gen Informatics Logo" className="logo" />
+        </Link>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

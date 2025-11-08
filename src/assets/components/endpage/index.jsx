@@ -1,66 +1,54 @@
-import React from "react"
+import React from "react";
+import { Link } from 'react-router-dom';
 
 const footerLinks = [
   {
     title: "Industries",
     items: [
-      "Agriculture",
-      "Citizen Services",
-      "Education",
-      "Food Security",
-      "Government Functions",
-      "Healthcare",
-      "Land & Industry",
-      "Mining",
-      "Smart City",
-      "Travel, Tourism & Hospitality",
+      { name: "Agriculture", path: "/industries" },
+      { name: "Citizen Services", path: "/industries" },
+      { name: "Education", path: "/industries" },
+      { name: "Food Security", path: "/industries" },
+      { name: "Government Functions", path: "/industries" },
+      { name: "Healthcare", path: "/industries" },
+      { name: "Land & Industry", path: "/industries" },
+      { name: "Mining", path: "/industries" },
+      { name: "Smart City", path: "/industries" },
+      { name: "Travel, Tourism & Hospitality", path: "/industries" },
     ],
   },
   {
     title: "Services",
     items: [
-      "AI & Allied Services",
-      "Consulting & Allied Services",
-      "Data & Analytics",
-      "Emerging Technologies",
-      "Engineering, Application & Transformation",
-      "IT Facilities, Cybersecurity & Partner Services",
+      { name: "AI & Allied Services", path: "/services" },
+      { name: "Consulting & Allied Services", path: "/services" },
+      { name: "Data & Analytics", path: "/services" },
+      { name: "Emerging Technologies", path: "/services" },
+      { name: "Engineering, Application & Transformation", path: "/services" },
+      { name: "IT Facilities, Cybersecurity & Partner Services", path: "/services" },
     ],
   },
   {
     title: "About Us",
     items: [
-      "Overview",
-      "Leaders & Advisors",
-      "Newsroom",
-      "History",
-      "Awards & Recognitions",
-      "Philosophy",
-      "Quality",
-      "Code of Ethics",
-      "Social Responsibility & Sustainability",
-      "Policies at CSM",
-      "Testimonials",
+      { name: "Our Story", path: "/about" },
+      { name: "Team", path: "/about" },
+      { name: "Vision & Mission", path: "/about" },
     ],
   },
   {
     title: "Other Links",
     items: [
-      "Contact Us",
-      "Feedback",
-      "Career",
-      "Recruitment Fraud Alert",
-      "Privacy Policy",
-      "Cookie Policy",
-      "Terms of use",
-      "Disclaimer",
-      "Brand Name Disclaimer",
-      "CSM Synapse",
-      "Sitemap",
-      "Konnecta",
+      { name: "Contact Us", path: "/contact" },
+      { name: "Feedback", path: "/feedback" },
+      { name: "Career", path: "/career" },
+      { name: "Cookie Policy", path: "/cookie-policy" },
+      { name: "Privacy Policy", path: "/privacy-policy" },
+      { name: "Disclaimer", path: "/disclaimer" },
+      { name: "Sitemap", path: "/sitemap" },
     ],
   },
-]
+];
 
 const EndPage = () => (
   <footer style={{
@@ -83,7 +71,6 @@ const EndPage = () => (
         alignItems: "center",
         gap: "1.5rem"
       }}>
-        {/* <img src="/logo.png" alt="Logo" style={{ width: 60, marginRight: 16 }} /> */}
         <span style={{
           fontSize: 28,
           color: "#f36f21",
@@ -127,15 +114,17 @@ const EndPage = () => (
               fontSize: 15
             }}>
               {section.items.map((item, i) => (
-                <li key={i} style={{
-                  color: "#bfc2c9",
-                  cursor: "pointer",
-                  transition: "color 0.18s"
-                }}
-                  onMouseOver={e => e.currentTarget.style.color = "#f36f21"}
-                  onMouseOut={e => e.currentTarget.style.color = "#bfc2c9"}
-                >
-                  {item}
+                <li key={i}>
+                  <Link to={item.path} style={{
+                    color: "#bfc2c9",
+                    textDecoration: 'none',
+                    transition: "color 0.18s"
+                  }}
+                    onMouseOver={e => e.currentTarget.style.color = "#f36f21"}
+                    onMouseOut={e => e.currentTarget.style.color = "#bfc2c9"}
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -153,6 +142,6 @@ const EndPage = () => (
       </div>
     </div>
   </footer>
-)
+);
 
-export default EndPage
+export default EndPage;
