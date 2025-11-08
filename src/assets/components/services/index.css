@@ -17,8 +17,16 @@ body {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
+  /* Gradient border (black -> white) */
+  border: 1px solid transparent; /* keep inner border transparent for clipping */
+  background-image:
+    linear-gradient(var(--background), var(--background)), /* inner background */
+    linear-gradient(90deg, #000 0%, #fff 100%); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
+
 
 .services-section::before {
   content: '';
@@ -204,7 +212,7 @@ body {
 }
 
 .cta-description {
-  color: var(--muted-foreground);
+  color: oklch(0.3 0.01 0);
   margin-bottom: 1.5rem;
   max-width: 32rem;
   margin-left: auto;
