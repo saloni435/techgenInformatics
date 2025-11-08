@@ -111,7 +111,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="services-section">
+    <section id="services" className="services-section">
       <div className="container">
         {/* Header */}
         <div className="header">

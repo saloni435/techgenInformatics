@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import techgenLogo from "../assets/images/techgenlogo.png";
 import "./simple-navbar.css";
 
@@ -14,12 +15,12 @@ const SimpleNavbar = () => {
     { name: "Career", link: "/career" },
   ];
 
-  // About Us dropdown items
-  const aboutUsItems = [
-    { name: "Company", link: "/about/company" },
-    { name: "Team", link: "/about/team" },
-    { name: "History", link: "/about/history" }
-  ];
+  // About Us dropdown items (removed - now goes directly to About page)
+  // const aboutUsItems = [
+  //   { name: "Company", link: "/about/company" },
+  //   { name: "Team", link: "/about/team" },
+  //   { name: "History", link: "/about/history" }
+  // ];
 
   // Handle scroll effect
   useEffect(() => {
@@ -55,15 +56,15 @@ const SimpleNavbar = () => {
           <ul className="mobile-dropdown-content">
             {items.map((item, index) => (
               <li key={index}>
-                <a
-                  href={item.link}
+                <Link
+                  to={item.link}
                   onClick={() => {
                     setIsOpen(false);
                     onItemClick();
                   }}
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -72,37 +73,42 @@ const SimpleNavbar = () => {
     );
   };
 
+  const navigate = useNavigate();
+
+  const handleNavClick = (e, item) => {
+    // For in-page sections, scroll instead of navigating away
+    if (item && (item.link === '/services' || item.link === '/industries')) {
+      e.preventDefault();
+      const id = item.link.replace('/', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setIsMobileMenuOpen(false);
+        return;
+      }
+      // fallback to route if section not on page
+      navigate(item.link);
+    }
+  };
+
   return (
     <nav className={`simple-navbar ${scrolled ? 'shadow-lg' : ''}`}>
       {/* Logo */}
       <div className="simple-nav-logo">
-        <a href="/">
+        <Link to="/">
           <img 
             src={techgenLogo} 
             alt="Tech Gen Informatics Logo" 
             className="h-10" 
           />
-        </a>
+        </Link>
       </div>
 
       {/* Desktop Navigation */}
       <ul className="simple-nav-links">
         {navItems.map((item, index) => (
-          <li key={index} className={item.name === "About Us" ? "simple-dropdown" : ""}>
-            {item.name === "About Us" ? (
-              <>
-                <a href={item.link}>{item.name}</a>
-                <ul className="simple-dropdown-content">
-                  {aboutUsItems.map((subItem, subIndex) => (
-                    <li key={subIndex}>
-                      <a href={subItem.link}>{subItem.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : (
-              <a href={item.link}>{item.name}</a>
-            )}
+          <li key={index}>
+            <Link to={item.link} onClick={(e) => handleNavClick(e, item)}>{item.name}</Link>
           </li>
         ))}
       </ul>
@@ -123,20 +129,15 @@ const SimpleNavbar = () => {
           <ul>
             {navItems.map((item, index) => (
               <li key={index}>
-                {item.name === "About Us" ? (
-                  <MobileDropdown 
-                    name={item.name} 
-                    items={aboutUsItems} 
-                    onItemClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                ) : (
-                  <a
-                    href={item.link}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                )}
+                <Link
+                  to={item.link}
+                  onClick={(e) => {
+                    handleNavClick(e, item);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,0 +1,365 @@
+/* Career Page Styles */
+.career-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.career-hero {
+  padding: 8rem 0 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #fff, #e3f2fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.company-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  color: #64b5f6;
+}
+
+.stat h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat p {
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Job Positions Section */
+.job-positions {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.job-positions h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.positions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.position-category {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.position-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #64b5f6;
+  border-bottom: 2px solid #64b5f6;
+  padding-bottom: 0.5rem;
+}
+
+.position-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.position-category li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.position-category li:hover {
+  padding-left: 1rem;
+  color: #64b5f6;
+}
+
+.position-category li:last-child {
+  border-bottom: none;
+}
+
+/* Application Form Section */
+.application-form {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.career-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #e3f2fd;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #64b5f6;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group select option {
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* File Upload */
+.file-upload {
+  position: relative;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-display {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-display:hover {
+  border-color: #64b5f6;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.upload-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+  color: #64b5f6;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #64b5f6, #42a5f5);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #42a5f5, #1e88e5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(100, 181, 246, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Status Messages */
+.success-message {
+  background: rgba(76, 175, 80, 0.2);
+  color: #a5d6a7;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.error-message {
+  background: rgba(244, 67, 54, 0.2);
+  color: #ef9a9a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Career Contact Section */
+.career-contact {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.career-contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+  color: #64b5f6;
+}
+
+.contact-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #e3f2fd;
+}
+
+.contact-item p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .career-form {
+    padding: 2rem;
+  }
+  
+  .company-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .career-form {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,414 @@
+/* About Page Styles */
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.about-hero {
+  padding: 8rem 0 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #fff, #e3f2fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Company Overview */
+.company-overview {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.overview-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #e3f2fd;
+}
+
+.overview-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.company-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.highlight-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #64b5f6;
+  margin-bottom: 1rem;
+}
+
+.company-highlight h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e3f2fd;
+}
+
+.company-highlight p {
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.mission-card,
+.vision-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.mv-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #64b5f6;
+  margin-bottom: 1.5rem;
+}
+
+.mission-card h3,
+.vision-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #e3f2fd;
+}
+
+.mission-card p,
+.vision-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Core Values */
+.core-values {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.core-values h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #e3f2fd;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.value-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #64b5f6;
+  margin-bottom: 1rem;
+}
+
+.value-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #e3f2fd;
+}
+
+.value-card p {
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Company Stats */
+.company-stats {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.company-stats h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #e3f2fd;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #64b5f6;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #e3f2fd;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.reason-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.reason-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #64b5f6;
+  margin-bottom: 1rem;
+}
+
+.reason-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #e3f2fd;
+}
+
+.reason-card p {
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* About CTA */
+.about-cta {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e3f2fd;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #64b5f6, #42a5f5);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #42a5f5, #1e88e5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(100, 181, 246, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .overview-content h2,
+  .core-values h2,
+  .company-stats h2,
+  .why-choose-us h2,
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .value-card,
+  .reason-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+}

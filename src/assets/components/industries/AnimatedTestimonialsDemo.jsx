@@ -33,7 +33,7 @@ export default function AnimatedTestimonialsDemo() {
     },
   ];
   return (
-    <div style={{ backgroundColor: 'var(--background)', padding: '4rem 2rem', textAlign: 'center', color: '#fff' }}>
+    <div id="industries" style={{ backgroundColor: 'var(--background)', padding: '4rem 2rem', textAlign: 'center', color: '#fff' }}>
       <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '3rem', color: '#fff' }}>Industries We Serve</h2>
       <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
     </div>

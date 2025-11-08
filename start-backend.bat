@@ -1,0 +1,9 @@
+@echo off
+echo Starting TechGen Backend Server...
+cd /d "%~dp0backend"
+echo Installing dependencies...
+call npm install
+echo.
+echo Starting server...
+call npm run dev
+pause
